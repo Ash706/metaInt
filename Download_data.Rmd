@@ -1,0 +1,86 @@
+---
+title: "Data_access"
+author: "Ashfaq Ali"
+date: "2/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r libraries R}
+required_pkgs = c(
+  "TCGAbiolinks", 
+  "GEOquery", 
+  "GenomicDataCommons",
+  "limma",
+  "curatedTCGAData",
+  "recount",
+  "curatedMetagenomicData",
+  "phyloseq",
+  "HMP16SData",
+  "caTools",
+  "piano",
+  "isa",
+  "VennDiagram",
+  "downloader",
+    "gdata",
+    "AnnotationDbi",
+    "hgu133a.db",
+  "PharmacoGx")
+BiocManager::install(required_pkgs)
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(GEOquery)
+
+```
+
+# Data download guide from online resuorces
+
+ - Microarray data
+ - RNA seq data
+ - Proteomics data
+ - Metbolomics data
+ - Phramocogenomics/Drug targets data
+ - GWAS data
+ - Multi-Omics data
+ - Single Cell RNA-seq data
+ - Disease Specific data e.g., TCGA
+ - Networks and Models
+ - Gene Sets
+ - Annotations
+
+## Load the microarray Liver RNA-seq dataset GSE130970
+
+Gene expression omnibus is a resource for douwnloading microarray and RNA-seq data from the published studies.
+This data can be downloaded in an  friendly format in the form of "ExpressionSet" or "SummarizedExperiment"
+
+```{r}
+gse = getGEO("GSE130970")
+library(SummarizedExperiment)
+se = as(gse, "SummarizedExperiment")
+spec("GSE130970")
+```
+
+```{r}
+gset <- getGEO("GSE130970", GSEMatrix =TRUE, destdir= "../Data", AnnotGPL=FALSE)
+gse <- getGEO(filename="../Data/GPL16791.soft")
+se <- as(gse, "SummarizedExperiment")
+```
+
+```{r}
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE130nnn/GSE130970/suppl/GSE130970_all_sample_salmon_tximport_counts_entrez_gene_ID.csv.gz
+```
+
+
+```{r}
+library(PharmacoGx)
+availablePSets(canonical = FALSE)
+```
+
+

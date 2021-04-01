@@ -1,0 +1,83 @@
+name: omicsInt
+channels:
+  - conda-forge
+  - defaults
+  - r
+  - bioconda
+dependencies:
+  - python
+  - jupyterlab
+  - jupyterthemes
+  - jupyter_contrib_nbextensions
+  - matplotlib
+  - nb_conda
+  - nb_conda_kernels
+  - pandas
+  - rise
+  - tabulate
+  - keras #=2.4.3
+  - tensorflow >=2.0.0
+#  - pydot
+#  - graphviz
+#  - scikit-learn
+#  - mpld3
+#  - msprime
+  - numpy
+#  - seaborn >= 0.11.0
+  - wget
+#  - gseapy=0.9.15
+  - leidenalg=0.7.0
+#  - python-igraph=0.7.1.post7
+#  - pycairo=1.18.1
+  - glpk=4.65
+  - python-igraph
+
+
+  # R
+  - r-base
+  - bioconductor-geoquery
+#  - bioconductor-deseq2
+#  - cytoscape
+  - rstudio
+  - r-devtools
+  - r-reticulate
+  - r-metafor
+  - r-learnr
+  - r-GSA
+  - r-combinat
+  - r-samr
+  - r-survival
+  - r-cluster
+  - r-gplots
+  - r-ggplot2
+  - r-irr
+  - r-shape
+  -  r-snow
+  - r-snowfall
+  - r-igraph
+  - r-doMC
+  - r-PMA
+   # GSA
+  - r-pheatmap #=1.0.12
+  - r-tidyr #=1.1.2
+  - r-tidyverse #=1.3.0
+
+  - bioconductor-multtest
+  - bioconductor-Biobase
+  - bioconductor-edgeR
+  - bioconductor-DESeq2
+  - bioconductor-impute
+  - bioconductor-limma
+  - bioconductor-AnnotationDbi
+  - bioconductor-consensusclusterplus
+  - bioconductor-genefilter
+  - bioconductor-GSEABase
+  - bioconductor-Rgraphviz
+  - bioconductor-genemeta
+  - bioconductor-org.hs.eg.db #=3.11.4
+  - bioconductor-piano #=2.4.0
+  - bioconductor-tcgabiolinks #=2.16.0
+#  - bioconductor-RCy3
+#  - r-igraph
+#  - r-hiver
+#  - r-circlize
